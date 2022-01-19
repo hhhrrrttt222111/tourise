@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import './App.css';
 
 import { Profile, Login } from "./components";
+import { HomePage } from './pages'
 import PrivateRoute from "./utils/PrivateRoute"
 import ScrollToTop from "./utils/ScrollToTop"
 
@@ -12,6 +13,7 @@ function App() {
       <BrowserRouter>
         <ScrollToTop />
         <Routes>
+            <Route path="/" element={<HomePage />} />
             <Route path="login" element={<Login />} />
             <Route 
               path="profile" 
