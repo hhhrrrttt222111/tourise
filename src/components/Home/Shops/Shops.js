@@ -10,7 +10,7 @@ function Shops() {
             <div className='shops__cards'>
                 <div className='shopCard big__card'>
                     <AiOutlineShop className='shopCard__icon'/>
-                    <h2>Tourists can choose between local sellers</h2>
+                    <h2>Choose between local sellers </h2>
                 </div>
                 <div className='double__card'>
                     <div className='shopCard mt__neg'>

@@ -1,4 +1,9 @@
 .homePage {
     background-color: var(--bg-color);
     padding: 0 2.5rem;
+    background: url('../../assets/svg/Home/shopBg.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-attachment: fixed;
 }

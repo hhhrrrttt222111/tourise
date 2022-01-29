@@ -4,6 +4,7 @@
     flex-direction: column;
     align-items: flex-start;
     padding-top: 4.5rem;
+
 }
 
 .shops__cards {
@@ -29,6 +30,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    background-color: var(--bg-color);
     box-shadow: 0px 8px 30px -10px rgba(30,61,89,0.75);
     -webkit-box-shadow: 0px 8px 30px -10px rgba(30,61,89,0.75);
     -moz-box-shadow: 0px 8px 30px -10px rgba(30,61,89,0.75);
