@@ -1,11 +1,13 @@
 import React from 'react'
+import { Landing, Navbar } from '../../components'
 
 import './HomePage.css'
 
 function HomePage() {
     return (
         <div className='homePage'>
-            <h1>Home</h1>
+            <Navbar />
+            <Landing />
         </div>
     )
 }

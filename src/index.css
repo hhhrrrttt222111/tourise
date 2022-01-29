@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Neucha&display=swap');
 
 * {
   margin: 0;
@@ -12,7 +12,8 @@
   --bg-color: #f5f0e1;
   --primary-color: #1e3d59;
   --secondary-color: #ff6e40;
-  --text-main: #333333;
+  --text-main: #1a1a1a;
+  --yellow: #ffc13b
 }
 
 a {

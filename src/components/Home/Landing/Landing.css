@@ -1,0 +1,115 @@
+.landing {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 0 2.5rem;
+    box-sizing: content-box;
+    background-color: var(--secondary-color);
+    height: calc(100vh - 100px);
+    border-radius: 30px;
+}
+
+.landing_left {
+    flex: 0.6;
+    height: 100%;
+}
+
+.landing_left__content {
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 90%;
+    gap: 1rem;
+    color: var(--text-main);
+    height: 100%;
+}
+
+.landing__hr {
+    width: 80%;
+    display: block;
+    height: 2px;
+    background-color: var(--text-main);
+    border: 0;
+    border-radius: 10px;
+    margin: 1rem 0;
+}
+
+.landing_left__content h1 {
+    font-size: 3.5rem;
+    font-family: 'Neucha', cursive;
+}
+
+.landing_left__content p {
+    font-size: 1.5rem;
+    font-family: var(--secondary-font);
+    font-weight: 500;
+    line-height: 130%;
+    margin-top: 0.5rem;
+}
+
+.landing_btn_container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.landingBtn {
+    outline: none;
+    height: 48px;
+    width: 160px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Neucha', cursive;
+    font-size: 1.15rem;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.landing_d_btn {
+    background-color: var(--primary-color);
+    border: none;
+    color: var(--yellow);
+}
+
+.landing_g_btn {
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    border: 3px solid var(--primary-color);
+    color: var(--primary-color);
+    outline: 0;
+    border-color: var(--primary-color);
+    white-space: nowrap !important;
+    color: var(--primary-color);
+    background-image: linear-gradient(45deg, var(--primary-color) 50%, transparent 50%);
+    background-position: 100%;
+    background-size: 400%;
+    transition: background 200ms ease-in-out;
+}
+
+.landing_d_btn:hover {
+
+}
+
+.landing_g_btn:hover {
+    background-position: 0;
+    color: var(--yellow);
+}
+
+.landing_right {
+    flex: 0.4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.landing_right img {
+    width: 90%;
+}
