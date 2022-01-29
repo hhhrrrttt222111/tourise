@@ -11,7 +11,7 @@ function Landing() {
             <div className='landing_left'>
                 <img src={leaves} alt="" className='landing_leaf' />
                 <div className='landing_left__content'>
-                    <h1>I've Seen The Future, and It's Tourise-Shaped</h1>
+                    <h1>We've Seen The Future, and It's Tourise-Shaped</h1>
                     <p>Vacation, the best you can get! <br />
                         Order a vacation today!
                     </p>

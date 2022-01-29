@@ -30,6 +30,7 @@
     width: 145px;
     margin: 1rem;
     transition: 300ms ease-in-out;
+    pointer-events: none;
 }
 
 .guide_img:hover {
