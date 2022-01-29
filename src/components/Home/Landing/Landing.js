@@ -3,15 +3,17 @@ import React from 'react';
 import './Landing.css'
 
 import ship from '../../../assets/svg/Home/ship.svg'
+import leaves from '../../../assets/svg/Home/leaves.svg'
 
 function Landing() {
     return (
         <div className='landing'>
             <div className='landing_left'>
+                <img src={leaves} alt="" className='landing_leaf' />
                 <div className='landing_left__content'>
-                    <h1>I've Seen The Future, and It's Tourisio-Shaped</h1>
+                    <h1>I've Seen The Future, and It's Tourise-Shaped</h1>
                     <p>Vacation, the best you can get! <br />
-                        Order a vaction today!
+                        Order a vacation today!
                     </p>
                     <hr className='landing__hr'/>
                     <div className='landing_btn_container'>

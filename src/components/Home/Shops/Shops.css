@@ -1,0 +1,76 @@
+.shops {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 4.5rem;
+}
+
+.shops__cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 3rem;
+
+}
+
+.double__card {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 2rem;
+}
+
+.shopCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0px 8px 30px -10px rgba(30,61,89,0.75);
+    -webkit-box-shadow: 0px 8px 30px -10px rgba(30,61,89,0.75);
+    -moz-box-shadow: 0px 8px 30px -10px rgba(30,61,89,0.75);
+    padding: 1rem 2rem;
+    width: 350px;
+    height: 150px;
+    border-radius: 10px;
+}
+
+
+.big__card {
+    width: 470px;
+}
+
+.mt__neg {
+    margin-top: -4rem;
+}
+
+.shopCard h2 {
+    text-align: center;
+    font-size: 1.25rem;
+    font-family: var(--secondary-font);
+    font-weight: 500;
+}
+
+.shopCard__icon {
+    font-size: 1.55rem;
+    border-radius: 50%;
+    padding: 0.6rem;
+    box-sizing: content-box;
+    background-color: #ffc13b;
+}
+
+
+.shops__img {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.shops__img img {
+    width: 350px;
+    margin-top: -2rem;
+}

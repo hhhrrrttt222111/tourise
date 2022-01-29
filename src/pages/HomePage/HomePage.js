@@ -1,5 +1,5 @@
 import React from 'react'
-import { Landing, Navbar } from '../../components'
+import { Landing, Navbar, Shops } from '../../components'
 
 import './HomePage.css'
 
@@ -8,6 +8,7 @@ function HomePage() {
         <div className='homePage'>
             <Navbar />
             <Landing />
+            <Shops />
         </div>
     )
 }

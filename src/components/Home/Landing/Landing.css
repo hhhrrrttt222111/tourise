@@ -2,16 +2,23 @@
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    margin: 0 2.5rem;
     box-sizing: content-box;
     background-color: var(--secondary-color);
-    height: calc(100vh - 100px);
+    height: calc(100vh - 120px);
     border-radius: 30px;
 }
 
 .landing_left {
     flex: 0.6;
     height: 100%;
+    position: relative;
+}
+
+.landing_leaf {
+    position: absolute;
+    width: 80px;
+    left: 15px;
+    top: 10px;
 }
 
 .landing_left__content {
@@ -24,6 +31,7 @@
     gap: 1rem;
     color: var(--text-main);
     height: 100%;
+    margin-top: 1rem;
 }
 
 .landing__hr {

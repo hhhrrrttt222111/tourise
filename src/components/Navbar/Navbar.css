@@ -1,3 +1,47 @@
 .navbar {
-    height: 80px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar_items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+
+.navbar_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.navBtn {
+    outline: none;
+    width: 110px;
+    height: 40px;
+    border-radius: 10px;
+    font-family: 'Neucha', cursive;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.nav_login {
+    background: var(--primary-color);
+    color: var(--bg-color);
+    border: none;
+}
+
+.nav_signup {
+    color: var(--primary-color);
+    border: 3px solid var(--primary-color);
+    background: none;
 }
