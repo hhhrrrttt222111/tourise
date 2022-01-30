@@ -1,5 +1,8 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState, useContext } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
+
+import { AuthContext } from '../../context/AuthContext'
+import { auth } from '../../firebase/firebase';
 
 import './Auth.css'
 
@@ -9,8 +12,38 @@ import './Auth.css'
 
 function Login() {
 
-    const [username, setUsername] = useState('')
+    const [email, setEmail] = useState('')
     const [pass, setPass] = useState('')
+
+    const { handleUser } = useContext(AuthContext);
+
+    let navigate = useNavigate();
+    function goToLogin() {
+        navigate("/");
+    }
+
+    const handleOnClick = (e) => {
+        e.preventDefault()
+        if(email && pass) {
+            auth.signInWithEmailAndPassword(email, pass)
+                .then(res => {
+                    console.log(res.user)
+                    handleUser(res.user)
+                    // if(res) {
+
+                    // }              
+                })
+                .then(() => {
+                    goToLogin();
+                })
+                .catch((er) => {
+                    console.log(er)
+                    alert(er)
+                })
+        } else {
+            alert('Enter email and password')
+        }    
+    }
 
     return (
         <div className='loginSignin'>
@@ -20,12 +53,12 @@ function Login() {
             </div>
             <div className='ls__right'>
                 <div className='ls__right_container'>
-                    <form className='loginSignin__form'>
+                    <form className='loginSignin__form' onSubmit={handleOnClick}>
                         <h1>Login</h1>
                         <div className='ls_input_row'>
                             <div className='ls_input_container'>
-                                <label>Username</label>
-                                <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} placeholder='Username' className='ls_input'/>
+                                <label>Email</label>
+                                <input type="text" value={email} onChange={(e) => setEmail(e.target.value)} placeholder='Email' className='ls_input'/>
                             </div> 
                             <div className='ls_input_container'>
 
@@ -42,7 +75,7 @@ function Login() {
                         </div>
 
                         <div className='ls_input_submit'>
-                            <button>Login</button>
+                            <button type='submit'>Login</button>
                             <p>Don't have an account? <Link to='/signin'>Sign Up</Link></p>
                         </div>
 

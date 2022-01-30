@@ -7,7 +7,7 @@ import lights from '../../../assets/svg/Home/lights.svg'
 
 function Events() {
     return (
-        <div className='events'>
+        <div className='events' id='events'>
             <div className='eventsLeft'>
                 <img src={events} alt="" className='events_img' />
             </div>

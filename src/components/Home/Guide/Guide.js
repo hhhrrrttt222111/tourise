@@ -14,7 +14,7 @@ import eight from '../../../assets/svg/Home/guides/8.svg'
 
 function Guide() {
   return (
-      <div className='guide'>
+      <div className='guide' id='guide'>
           <h1>Choose from your <span className='primary'>favourite</span> Guides</h1>
 
           <div className='guide__container'>

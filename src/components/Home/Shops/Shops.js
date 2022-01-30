@@ -6,7 +6,7 @@ import shop from '../../../assets/svg/Home/shop.svg'
 
 function Shops() {
     return (
-        <div className='shops'>
+        <div className='shops' id='shops'>
             <div className='shops__cards'>
                 <div className='shopCard big__card'>
                     <AiOutlineShop className='shopCard__icon'/>

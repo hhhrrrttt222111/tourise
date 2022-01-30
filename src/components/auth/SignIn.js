@@ -1,11 +1,15 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import firebase from 'firebase/compat';
+
+import { auth, db } from '../../firebase/firebase';
 
 import './Auth.css'
 
 import airport from '../../assets/svg/airport.svg'
 
 function SignIn() {
+    
 
     const [name, setName] = useState('')
     const [username, setUsername] = useState('')
@@ -13,6 +17,47 @@ function SignIn() {
     const [email, setEmail] = useState('')
     const [pass, setPass] = useState('')
     const [confirmPass, setConfirmPass] = useState('')
+
+    let navigate = useNavigate();
+    function goToLogin() {
+        navigate("/login");
+    }
+
+    const handleOnClick = (e) => {
+        e.preventDefault()
+        if(name && username && phone && email && pass && confirmPass) {
+            if(pass === confirmPass) {
+                auth.createUserWithEmailAndPassword(email, pass)
+                .then(res => {
+                    console.log(res.user)
+                    if(res) {
+                        db.collection('users').doc(res.user.uid).set({
+                            uid: res.user.uid,
+                            name: name,
+                            username: username,
+                            email: email,
+                            profilePhoto: '',
+                            dateJoined: firebase.firestore.FieldValue.serverTimestamp(),
+                            location: '',
+                            dob: ''
+        
+                        });
+                    }              
+                })
+                .then(() => {
+                    goToLogin();
+                })
+                .catch((er) => {
+                    console.log(er)
+                    alert(er)
+                })
+            } else {
+                alert('Passwords do not match')
+            }
+        } else {
+            alert('Enter all the fields')
+        }    
+    }
 
     return (
         <div className='loginSignin'>
@@ -22,7 +67,7 @@ function SignIn() {
             </div>
             <div className='ls__right'>
                 <div className='ls__right_container'>
-                    <form className='loginSignin__form'>
+                    <form className='loginSignin__form' onSubmit={handleOnClick}>
                         <h1>Register</h1>
                         <div className='ls_input_row'>
                             <div className='ls_input_container'>
@@ -56,7 +101,7 @@ function SignIn() {
                         </div>
 
                         <div className='ls_input_submit'>
-                            <button>Create Account</button>
+                            <button type='submit'>Create Account</button>
                             <p>Already have an account? <Link to='/login'>Log in</Link></p>
                         </div>
 

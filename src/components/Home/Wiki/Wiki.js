@@ -47,7 +47,7 @@ const wikis = [
 
 function Wiki() {
     return (
-      <div className='wiki'>
+      <div className='wiki' id='wiki'>
           <div className='wiki_left'>
             <h1>Search for..</h1>
             <div className='wiki_container'>
