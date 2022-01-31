@@ -1,0 +1,127 @@
+.sellers {
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sellers_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem;
+}
+
+.sellerCard {
+    width: 280px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    box-shadow: 0px 3px 26px -12px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 3px 26px -12px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 3px 26px -12px rgba(0,0,0,0.75);
+    border-radius: 10px;
+}
+
+.sellerCardImg {
+    width: 100%;
+    position: relative;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.addToFav__icon {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    font-size: 1.25rem;
+    background-color: var(--bg-color);
+    padding: 0.4rem;
+    box-sizing: content-box;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.addToFav__icon:hover {
+    background-color: var(--secondary-color);
+    color: var(--bg-color);
+}
+
+.sellerCardImg img {
+    width: 100%;
+    height: 150px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.sellerCardContent {
+    padding: 0.5rem 1rem;
+    width: 100%;
+}
+
+.sellerCardContent h3 {
+    font-family: var(--primary-font);
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: var(--text-main);
+}
+
+
+.sellerCardActions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.sellerCardAction__icon {
+    font-size: 1.55rem;
+    cursor: pointer;
+    text-decoration: none;
+
+}
+
+.dialog_btns {
+    outline: none;
+    border: none;
+    background-color: var(--secondary-color);
+    color: var(--bg-color);
+    border-radius: 15px;
+    height: 34px;
+    width: 80px;
+    cursor: pointer;
+    font-family: var(--secondary-font);
+    font-weight: 500;
+    font-size: 0.85rem;
+    text-transform: inherit;
+}
+
+.sellerCard__dialog {
+    display: flex;
+    flex-direction: column;
+    font-family: var(--secondary-font);  
+    color: var(--text-main); 
+    gap: 1rem;
+}
+
+.sellerCard__dialog p {
+    font-size: 1.115rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.sellerCard__dialog a {
+    font-size: 1.115rem;
+    font-weight: 700;
+    color: var(--text-main); 
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}

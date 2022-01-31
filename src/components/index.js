@@ -9,3 +9,6 @@ export { default as Shops } from './Home/Shops/Shops'
 export { default as Events } from './Home/Events/Events'
 export { default as Guide } from './Home/Guide/Guide'
 export { default as Wiki } from './Home/Wiki/Wiki'
+
+export { default as Sellers } from './Main/Sellers/Sellers'
+export { default as Guides } from './Main/Guides/Guides'
