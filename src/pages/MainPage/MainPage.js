@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Sellers, Guides } from '../../components'
+import { Sellers, Guides, Event } from '../../components'
 
 import './MainPage.css'
 
@@ -9,6 +9,7 @@ function MainPage() {
         <div className='mainPage'>
             <Sellers />
             <Guides />
+            <Event />
         </div>
     );
 }

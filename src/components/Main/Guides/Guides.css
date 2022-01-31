@@ -1,14 +1,82 @@
-.guide {
+.guides {
     padding: 2.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+    background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
 }
+
 
 .guides_container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1rem;
-    margin: 2rem;
+    gap: 2rem;
+    width: 90%;
+    margin: 2rem auto;
+
+}
+
+.guideCard {
+    width: 180px;
+    height: 220px;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0px 3px 26px -12px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 3px 26px -12px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 3px 26px -12px rgba(0,0,0,0.75);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+    position: relative;
+}
+
+.guideCard:hover {
+    transform: scale(1.1);
+}
+
+.verifed_icon {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.guideCard img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.guideCard__content {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    gap: 0.25rem;  
+}
+
+.guideCard__content h2 {
+    font-size: 1.15rem;
+    white-space: nowrap;
+    font-family: var(--primary-font);
+}
+
+.guideCard button {
+    outline: none;
+    border: none;
+    background-color: var(--secondary-color);
+    color: var(--bg-color);
+    border-radius: 20px;
+    height: 34px;
+    padding: 0 1.5rem;
+    cursor: pointer;
+    font-family: var(--secondary-font);
+    font-weight: 500;
+    font-size: 0.85rem;
+    text-transform: inherit;
+    white-space: nowrap;
 }

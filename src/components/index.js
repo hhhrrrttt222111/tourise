@@ -12,3 +12,4 @@ export { default as Wiki } from './Home/Wiki/Wiki'
 
 export { default as Sellers } from './Main/Sellers/Sellers'
 export { default as Guides } from './Main/Guides/Guides'
+export { default as Event } from './Main/Event/Event'
