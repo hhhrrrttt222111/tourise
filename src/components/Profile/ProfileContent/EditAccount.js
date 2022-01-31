@@ -24,11 +24,11 @@ function EditAccount() {
     const [imageUrl, setImageUrl] = useState('')
     const [open, setOpen] = useState(false);
 
-    const handleAddLoanOpen = () => {
+    const handleImageOpen = () => {
       setOpen(true);
     };
   
-    const handleAddLoanClose = () => {
+    const handleImageClose = () => {
       setOpen(false);
     };
 
@@ -71,22 +71,18 @@ function EditAccount() {
         });
     }
 
-    
-
-
-    console.log(info)
 
     return (
         <div className='profileContent'>
             <div className='edit_profilePic'>
                 <div className="phi_img">
                     <img src={info.profilePhoto} alt="" />
-                    <HiPencil className="edit_image" onClick={handleAddLoanOpen}/>
+                    <HiPencil className="edit_image" onClick={handleImageOpen}/>
                 </div>
                 <Dialog 
                     fullWidth
                     open={open} 
-                    onClose={handleAddLoanClose}
+                    onClose={handleImageClose}
                     PaperProps={{
                         style: {
                             backgroundColor: '#f5f0e1',
@@ -104,7 +100,7 @@ function EditAccount() {
                         </div>
                     </DialogContent>
                     <DialogActions>
-                        <button onClick={updateProfileImage} className='addButton'>Save</button>
+                        <button onClick={updateProfileImage} className='profile_btns'>Save</button>
                     </DialogActions>
                 </Dialog>
             </div>
@@ -135,7 +131,7 @@ function EditAccount() {
                 </div>
             </div>
             <div className='save_profile'>
-                <button onClick={updateProfile}>Save</button>
+                <button onClick={updateProfile} className='profile_btns'>Save</button>
             </div>
         </div>
     );

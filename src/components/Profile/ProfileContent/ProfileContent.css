@@ -96,3 +96,60 @@
     outline: none;
     box-shadow: 0.1rem 0.24rem 0.28rem #1e3d5963;
 }
+
+
+.passSec {
+   padding: 2rem; 
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   gap: 3rem;
+}
+
+.resetPass {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.resetPass button {
+    outline: none;
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    border-radius: 7px;
+    height: 40px;
+    width: 180px;
+    cursor: pointer;
+    font-family: var(--secondary-font);
+    font-weight: 500;
+    font-size: 0.85rem;
+    text-transform: inherit;
+}
+
+.resetPass button:hover {
+    background-color: var(--primary-color);
+}
+
+.save_profile {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+
+.profile_btns {
+    outline: none;
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    border-radius: 20px;
+    height: 36px;
+    width: 100px;
+    cursor: pointer;
+    font-family: var(--secondary-font);
+    font-weight: 500;
+    font-size: 0.95rem;
+    text-transform: inherit;
+}
