@@ -39,7 +39,7 @@ function Profile() {
         <div className='profile'>
             <div className='profile_nav'>
 
-                <Link to='/'>
+                <Link to='/home'>
                     <MdArrowBackIosNew className='go_back'/>
                 </Link>
                 

@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 import './App.css';
 
-import { Profile, Login, SignIn } from "./components";
+import { Profile, Login, SignIn, GuideForm, EventForm, SellerForm } from "./components";
 import { HomePage, MainPage } from './pages'
 import PrivateRoute from "./utils/PrivateRoute"
 import ScrollToTop from "./utils/ScrollToTop"
@@ -27,6 +27,31 @@ function App() {
               element={
                 <PrivateRoute>
                   <MainPage />
+                </PrivateRoute>
+              }
+            />
+
+
+            <Route path="admin/guide" 
+              element={
+                <PrivateRoute>
+                  <GuideForm />
+                </PrivateRoute>
+              }
+            />
+
+            <Route path="admin/event" 
+              element={
+                <PrivateRoute>
+                  <EventForm />
+                </PrivateRoute>
+              }
+            />
+
+            <Route path="admin/seller" 
+              element={
+                <PrivateRoute>
+                  <SellerForm />
                 </PrivateRoute>
               }
             />

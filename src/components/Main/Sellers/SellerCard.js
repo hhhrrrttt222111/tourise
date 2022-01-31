@@ -9,7 +9,7 @@ import { BiDotsVerticalRounded } from "react-icons/bi";
 
 import './Sellers.css'
 
-function SellerCard() {
+function SellerCard({ name, image, address, phone, description, website, instagram }) {
 
   const [moreOpen, setMoreOpen] = useState(false);
 
@@ -22,16 +22,26 @@ function SellerCard() {
   };
 
   return (
-    <div className='sellerCard'>
+    <div className='sellerCard' key={name}>
         <div className='sellerCardImg'>
             <AiOutlineHeart className='addToFav__icon'/>
-            <img src="https://imgmedia.lbb.in/media/2019/02/5c5b3c11bc58666870321792_1549483025273.jpg" alt="" />
+            <img src={image} alt="" />
         </div>
         <div className='sellerCardContent'>
-          <h3>Seller name</h3>
+          <h3>{name}</h3>
           <div className='sellerCardActions'>
-              <AiOutlineGlobal className='sellerCardAction__icon' color='#006666'/>
-              <AiOutlineInstagram className='sellerCardAction__icon' color='#cd486b'/>
+            {website && (
+              <a href={website} target="_blank" rel="noreferrer">
+                <AiOutlineGlobal className='sellerCardAction__icon' color='#006666'/>
+              </a>
+            )}
+
+            {instagram && (
+              <a href={instagram} target="_blank" rel="noreferrer">
+                <AiOutlineInstagram className='sellerCardAction__icon' color='#cd486b'/>
+              </a>
+              
+            )}
               <BiDotsVerticalRounded onClick={handleMoreOpen} className='sellerCardAction__icon' color='#333333'/>
 
               <Dialog 
@@ -45,17 +55,17 @@ function SellerCard() {
                   }}
                   disableScrollLock={true}
               >
-                  <DialogTitle>Seller name</DialogTitle>
+                  <DialogTitle>{name}</DialogTitle>
                   <DialogContent>
                       <div className='sellerCard__dialog'>
-                        <p>Seller description nlah blah bme mhe Only the owner of this repository can see this message.</p>
-                        <a href="/" >
+                        <p>{description}</p>
+                        <a href={`tel:${phone}`} >
                           <AiOutlinePhone size={22}/>
-                            1236547890
+                            {phone}
                         </a>
                         <p>
                           <AiOutlineShop size={22}/>
-                          Mountain View, California, United States - 658741
+                          {address}
                         </p>
                       </div>
                   </DialogContent>
