@@ -36,11 +36,11 @@ function SignIn() {
                             name: name,
                             username: username,
                             email: email,
+                            phone: phone,
                             profilePhoto: '',
                             dateJoined: firebase.firestore.FieldValue.serverTimestamp(),
                             location: '',
                             dob: ''
-        
                         });
                     }              
                 })
@@ -86,7 +86,7 @@ function SignIn() {
                             </div>
                             <div className='ls_input_container'>
                                 <label>Phone</label>
-                                <input type="text" value={phone} onChange={(e) => setPhone(e.target.value)} placeholder='Phone' className='ls_input'/>
+                                <input type="text" value={phone} onChange={(e) => setPhone(e.target.value.replace(/[^0-9]/g, ""))} placeholder='Phone' className='ls_input'/>
                             </div> 
                         </div>
                         <div className='ls_input_row'>

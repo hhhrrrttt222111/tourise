@@ -7,6 +7,7 @@ export const AuthContext = createContext()
 function AuthContextProvider(props) {
     const [currentUser, setCurrentUser] = useState(localStorage.getItem('touriseUser'))
     const [pending, setPending] = useState(true) 
+    const [profilePic, setProfilePic] = useState('')
 
     const authListener = () => {
         auth.onAuthStateChanged(user => {
@@ -25,6 +26,9 @@ function AuthContextProvider(props) {
         setCurrentUser(user)
         localStorage.setItem('touriseUser', user)
     }
+    const handleProfilePic = (img) => {
+        setProfilePic(img)
+    }
 
     useEffect(() => {
         authListener()
@@ -36,7 +40,7 @@ function AuthContextProvider(props) {
         localStorage.removeItem('touriseUser')
     }
 
-    const value = { currentUser, pending, handleLogout, handleUser }
+    const value = { currentUser, pending, handleLogout, handleUser, handleProfilePic, profilePic }
 
 
 

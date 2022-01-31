@@ -1,3 +1,105 @@
 .profile {
-    
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;   
+}
+
+.profile_nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 2rem;
+    height: 70px;
+    box-shadow: 0 4px 4px -4px rgba(0, 0, 0, .6);
+    background-color: var(--bg-color);
+    z-index: 9;
+    position: sticky;
+    top: 0;
+}
+
+.go_back {
+    cursor: pointer;
+    color: var(--primary-color);
+    font-size: 1.35rem;
+}
+
+.profile_nav h3 {
+    font-family: var(--primary-font);
+    color: var(--primary-color);
+    font-size: 1.35rem;
+}
+
+.logout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+}
+
+.logout_dropdown {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.profile_navImg {
+    width: 45px;
+    border-radius: 50%;
+    border: 1px solid gray;
+    padding: 1px;
+    cursor: pointer;
+    transition: 0.1s ease-in;
+}
+.profile_navImg:hover {
+    transform: scale(1.05);
+    border: none;
+}
+
+.profile_container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.profile_sidebar {
+    padding: 2rem;
+    flex: 0.25;
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1.5rem;
+}
+
+.sidebar_item {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1rem;
+    padding: 0.8rem 0;
+    box-shadow: 0 2px 2px -2px rgba(0, 0, 0, .4);
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.05rem;
+    font-weight: 400;
+    font-family: var(--primary-font);
+    color: var(--text-main);
+}
+
+.sidebar_item_active {
+    box-shadow: 0 4px 4px -4px rgba(0, 0, 0, .4);
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.profile_content {
+    padding: 1rem;
+    flex: 0.75;
+    height: 100%;
 }

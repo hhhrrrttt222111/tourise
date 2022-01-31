@@ -1,0 +1,98 @@
+.profileContent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 60%;
+}
+
+.edit_profilePic {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.phi_img {
+    position: relative;
+}
+
+.phi_img img {
+    width: 172px;
+    height: 172px;
+    border-radius: 50%;
+}
+
+.edit_image {
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    color: var(--bg-color);
+    cursor: pointer;
+    background-color: var(--primary-color);
+    font-size: 1.5rem;
+    padding: 0.25rem;
+    flex-shrink: 0;
+    border-radius: 50%;
+}
+
+.edit_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 2rem;
+    gap: 1.25rem;
+}
+
+.edit_input_container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 70%;  
+    gap: 0.15rem;
+}
+
+.edit_input_container label {
+    font-family: var(--secondary-font);
+    font-weight: 600;
+    font-size: 0.80rem;
+    color: var(--text-main);
+}
+
+.edit_input {
+    display: block;
+    margin: 0;
+    padding: 0.6rem 0.6rem;
+    color: inherit;
+    width: 100%;
+    font-family: var(--primary-font);
+    font-size: 0.9rem;
+    font-weight: inherit;
+    border: 2px solid var(--primary-color);
+    border-radius: 0.4rem;
+    transition: box-shadow 300ms;
+    width: 100%;
+    color: var(--text-main);
+    background-color: transparent;
+}
+
+.edit_input::-moz-placeholder {
+    color: #3333336e;
+}
+  
+.edit_input:-ms-input-placeholder {
+    color: #3333336e;
+}
+  
+.edit_input::placeholder {
+    color: #3333336e;
+}
+  
+.edit_input:focus {
+    outline: none;
+    box-shadow: 0.1rem 0.24rem 0.28rem #1e3d5963;
+}
