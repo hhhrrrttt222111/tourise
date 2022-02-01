@@ -16,7 +16,6 @@ export { default as MainNav } from './Main/MainNav/MainNav'
 export { default as Sellers } from './Main/Sellers/Sellers'
 export { default as Guides } from './Main/Guides/Guides'
 export { default as Event } from './Main/Event/Event'
-export { default as Map } from './Main/Map/Map'
 
 
 export { default as GuideForm } from './admin/GuideForm'
