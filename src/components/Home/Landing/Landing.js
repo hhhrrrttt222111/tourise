@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 
 import './Landing.css'
 
@@ -17,8 +19,12 @@ function Landing() {
                     </p>
                     <hr className='landing__hr'/>
                     <div className='landing_btn_container'>
-                        <button className='landingBtn landing_d_btn'>Discover More</button>
-                        <button className='landingBtn landing_g_btn'>Get Started</button>
+                        <HashLink to="#about" smooth>
+                            <button className='landingBtn landing_d_btn'>Discover More</button>
+                        </HashLink>
+                        <Link to='/home'>
+                            <button className='landingBtn landing_g_btn'>Get Started</button>
+                        </Link>
                     </div>
                 </div>
             </div>

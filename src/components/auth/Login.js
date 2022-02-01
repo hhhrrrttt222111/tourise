@@ -18,8 +18,8 @@ function Login() {
     const { handleUser } = useContext(AuthContext);
 
     let navigate = useNavigate();
-    function goToLogin() {
-        navigate("/");
+    function goToHome() {
+        navigate("/home");
     }
 
     const handleOnClick = (e) => {
@@ -34,7 +34,7 @@ function Login() {
                     // }              
                 })
                 .then(() => {
-                    goToLogin();
+                    goToHome();
                 })
                 .catch((er) => {
                     console.log(er)
