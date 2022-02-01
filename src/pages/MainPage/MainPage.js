@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Outlet } from 'react-router-dom';
 import { Sellers, Guides, Event, MainNav } from '../../components'
 
 import './MainPage.css'
@@ -11,6 +11,9 @@ function MainPage() {
             <Sellers />
             <Guides />
             <Event />
+
+            <Outlet />
+
         </div>
     );
 }

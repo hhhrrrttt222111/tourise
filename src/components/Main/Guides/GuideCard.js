@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import './Guides.css'
 
@@ -14,7 +15,9 @@ function GuideCard({ name, username, profilePic, verified }) {
             <div className='guideCard__content'>
                 <h2>{name}</h2>
             </div>
-            <button>Visit Profile</button>
+            <Link to={`/guide/${username}`}>
+                <button>Visit Profile</button>
+            </Link>
         </div>
     )
 }

@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap');
+
+.guideProfile {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+}
+
+.guideNav {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.guideProfile__header {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 2rem;
+    background: #360033;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0b8793, #360033);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0b8793, #360033); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+    height: 30vh;
+}
+
+.gp__header_content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: var(--bg-color);
+    font-family: 'Zen Kurenaido', sans-serif;
+}
+
+.gp__header_content h1 {
+    font-size: 4rem;
+    margin-right: 3rem;
+}
+.gp__header_content p {
+    font-size: 1.2rem;
+    font-weight: 900;
+    margin-right: 3rem;
+    letter-spacing: 2px;
+}
+
+.guideProfile__container {
+    display: flex;
+    width: 100%;
+}
+
+.gp__container_left {
+    flex: 0.3;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gp_left_content {
+    width: 60%;
+    background-color: var(--bg-color);;
+    position: relative;
+    height: 100%;
+    box-shadow: 0px 0px 17px -3px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 17px -3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 17px -3px rgba(0,0,0,0.75);
+    border-radius: 10px;
+    margin-top: -10%;
+}
+
+.gp_left_content img {
+    width: 100%;
+    border-radius: 50%;
+    margin-top: -50%;
+}
+
+
+.gp_content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+}
+
+.gp_content_div {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem; 
+
+}
+
+.gp_content_div h6 {
+    font-family: var(--primary-font);
+    text-transform: uppercase;
+    color: var(--text-main);
+    font-size: 0.8rem;
+}
+
+.gp_content_div p, .gp_content_div a {
+    font-family: var(--primary-font);
+    text-transform: uppercase;
+    color: var(--text-main);
+    font-weight: 500;
+    font-size: 0.75rem;
+    color: #4d4d4d;
+}
+
+
+.flex-col {
+    flex-direction: column;
+    align-items: flex-start; 
+    gap: 0.25rem;
+}
+
+.document_btn {
+    outline: none;
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    border-radius: 7px;
+    height: 40px;
+    width: 120px;
+    cursor: pointer;
+    font-family: var(--secondary-font);
+    font-weight: 500;
+    font-size: 0.85rem;
+    text-transform: inherit;
+    margin-top: 1rem;
+}
+
+.gp__container_right {
+    flex: 0.7;
+    height: 100%;
+    background-color: var(--bg-color);
+    min-height: 70vh;
+    padding: 2rem;
+}
+
+.gp__container_right h2 {
+    font-family: var(--secondary-font);  
+    color: var(--text-main); 
+}
+
+.reviews_form {
+    display: flex;
+    width: 80%;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+
+.review_btn {
+    outline: none;
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    border-radius: 7px;
+    width: 120px;
+    cursor: pointer;
+    font-family: var(--secondary-font);
+    font-weight: 500;
+    font-size: 0.85rem;
+    text-transform: inherit;
+}
+
+.reviews_container {
+    width: 80%;
+    margin-top: 2rem;
+}
+
+
+.reviewCard {
+    background-color: var(--primary-color);
+    margin: 0.8rem auto;
+    height: 75px;
+    border-radius: 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 1rem;
+    text-decoration: none;
+}
+
+.reviewCard__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-family: var(--primary-font);
+    font-style: normal;
+    margin-left: 1rem;
+    color: white;
+}
+
+.reviewCard__info h1 {
+    font-weight: 500;
+    font-size: 17px;
+}
+
+.reviewCard__info p {
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.reviewCard img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}

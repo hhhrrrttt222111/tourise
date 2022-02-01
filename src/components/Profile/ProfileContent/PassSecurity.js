@@ -105,7 +105,7 @@ function PassSecurity() {
                             },
                         }}
                     >
-                        <DialogTitle>Reset Password</DialogTitle>
+                        <DialogTitle>Delete Account</DialogTitle>
                         <DialogContent>
                             <div className='addLoan__body'>
                                 <div className='edit_input_container'>
