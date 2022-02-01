@@ -127,7 +127,7 @@ function GuideProfile() {
                     <div className='reviews_container'>
                         { reviews.map((review) => (
                         <div className="reviewCard" key={review.id}>
-                            <img src={review.data.profilePic} alt="" />
+                            <img src={review.data.profilePic ? review.data.profilePic : 'https://www.pngfind.com/pngs/m/610-6104451_image-placeholder-png-user-profile-placeholder-image-png.png'} alt="" />
                             <div className="reviewCard__info">
                                 <h1>{review.data.name}</h1>
                                 <p>{review.data.review}</p>

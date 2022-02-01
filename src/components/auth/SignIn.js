@@ -37,7 +37,7 @@ function SignIn() {
                             username: username,
                             email: email,
                             phone: phone,
-                            profilePhoto: '',
+                            profilePhoto: 'https://www.pngfind.com/pngs/m/610-6104451_image-placeholder-png-user-profile-placeholder-image-png.png',
                             dateJoined: firebase.firestore.FieldValue.serverTimestamp(),
                             location: '',
                             dob: ''
