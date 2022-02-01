@@ -7,6 +7,12 @@
     margin: auto;
 }
 
+.sellers h1 {
+    font-family: var(--primary-font);
+    color: var(--text-main);
+    font-size: 2rem;
+}
+
 .sellers_container {
     display: flex;
     flex-wrap: wrap;
@@ -126,4 +132,38 @@
     align-items: center;
     gap: 0.5rem;
     cursor: pointer;
+}
+
+
+
+@media (min-width: 992px) and (max-width: 1380px) {
+
+}
+
+
+@media screen and (max-width: 992px) {
+    .sellers {
+        padding: 1.5rem;
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .sellers {
+        padding: 1rem;
+        width: 100%;
+    }
+    .sellers h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .sellerCard {
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
 }

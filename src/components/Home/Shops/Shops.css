@@ -75,3 +75,75 @@
     width: 350px;
     margin-top: -2rem;
 }
+
+@media (min-width: 992px) and (max-width: 1380px) {
+
+}
+
+
+@media screen and (max-width: 992px) {
+    .shops__cards {
+        gap: 1rem;
+    }
+    .double__card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+        gap: 1rem;
+    }
+    .mt__neg {
+        margin-top: 0;
+    }
+    .big__card {
+        width: 80%;
+    }
+    .shopCard {
+        width: 80%;
+    }
+
+    .shops__img img {
+        width: 350px;
+        margin-top: 2rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .big__card {
+        width: 90%;
+    }
+    .shopCard {
+        width: 90%;
+        padding: 0.5rem 1rem;
+    }
+    .shopCard h2 {
+        font-size: 1.15rem;
+    }
+    .shops__img img {
+        width: 300px;
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .big__card {
+        width: 95%;
+    }
+    .shopCard {
+        width: 95%;
+    }
+    .shopCard h2 {
+        font-size: 1.05rem;
+    }
+    .shops__img img {
+        width: 280px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .shops__img img {
+        width: 250px;
+        margin-top: 0.5rem;
+    }
+}

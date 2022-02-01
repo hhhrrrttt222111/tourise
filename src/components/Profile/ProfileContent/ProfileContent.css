@@ -153,3 +153,38 @@
     font-size: 0.95rem;
     text-transform: inherit;
 }
+
+
+@media (min-width: 992px) and (max-width: 1380px) {
+
+}
+
+
+@media screen and (max-width: 992px) {
+    .edit_profilePic {
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .phi_img img {
+        width: 142px;
+        height: 142px;
+    }
+    .edit_info {
+        padding: 1rem;
+    }
+    .edit_input_container {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .edit_info {
+        padding: 1rem 0rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+}

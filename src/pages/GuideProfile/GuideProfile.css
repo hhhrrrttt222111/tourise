@@ -215,3 +215,86 @@
     height: 45px;
     border-radius: 50%;
 }
+
+
+
+@media (min-width: 992px) and (max-width: 1380px) {
+
+}
+
+
+@media screen and (max-width: 992px) {
+
+    .guideProfile__header {
+        justify-content:  center;
+        align-items: flex-start;
+        padding: 0 2rem;
+    }
+    .gp__header_content h1 {
+        font-size: 2.5rem;
+        margin-right: 0;
+    }
+    .gp__header_content p {
+        font-size: 1rem;
+        margin-right: 0;
+    }
+
+    .guideProfile__container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .gp__container_left {
+        flex: 1;
+        background-color: var(--bg-color);
+    }
+    .gp__container_right {
+        flex: 1;
+    }
+
+    .gp_left_content {
+        width: 30%;
+        background-color: var(--bg-color);
+        position: relative;
+        margin-top: 2rem;
+    }
+    .gp_left_content img {
+        width: 100%;
+        border-radius: 50%;
+        margin-top: -50%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .guideNav {
+        padding: 0 0.5rem;
+    }
+    .gp_left_content {
+        width: 50%;
+        margin-top: 2rem;
+    }
+    .gp__container_right {
+        padding: 1rem;
+    }
+    .reviews_form {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .gp_left_content {
+        width: 60%;
+        margin-top: 2rem;
+    }
+    .reviews_container {
+        width: 100%;
+        margin-top: 2rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .gp_left_content {
+        width: 80%;
+        margin-top: 2rem;
+    }
+}

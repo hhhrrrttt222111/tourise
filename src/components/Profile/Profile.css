@@ -103,3 +103,56 @@
     flex: 0.75;
     height: 100%;
 }
+
+
+@media (min-width: 992px) and (max-width: 1380px) {
+
+}
+
+
+@media screen and (max-width: 992px) {
+    .profileContent {
+        width: 100% !important;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .profile_nav {
+        padding: 0 1rem;
+        height: 60px;
+    }
+    .profile_nav h3 {
+        font-size: 1.15rem;
+    }
+    .profile_navImg {
+        width: 40px;
+    }
+
+    .profile_sidebar {
+        padding: 0.75rem;
+        flex: 0.15;
+        gap: 1.5rem;
+    }
+    .sidebar_item p {
+        display: none;
+    }
+
+    .profile_content {
+        flex: 0.85;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .profile_sidebar {
+        padding: 0.75rem;
+        flex: 0.1;
+    }
+
+    .profile_content {
+        flex: 0.9;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+}

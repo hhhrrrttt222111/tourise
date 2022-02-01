@@ -37,12 +37,6 @@ const wikis = [
     name: 'Wildlife & Zoo',
     Icon: <MdPets />
   },
-  {
-    id: 7,
-    name: 'Wildlife & Zoo',
-    Icon: <MdPets />
-  },
-
 ]
 
 function Wiki() {
@@ -52,7 +46,7 @@ function Wiki() {
             <h1>Search for..</h1>
             <div className='wiki_container'>
               {wikis.map((wiki) => (
-                <div className={`${wiki.id % 2 === 0 ? 'wikiCard' : 'wikiCard ml2'}`} key={wiki.id}>
+                <div className="wikiCard" key={wiki.id}>
                   <p className='wikiCard_icon'>{wiki.Icon}</p>
                   <h3>{wiki.name}</h3>
                 </div>

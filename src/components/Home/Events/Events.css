@@ -66,3 +66,50 @@
         transform: rotate(-10deg);    
     }
   }
+
+
+@media (min-width: 992px) and (max-width: 1380px) {
+    .eventsRight__container {
+        width: 65%;
+        height: 65%;
+    }
+}
+
+
+@media screen and (max-width: 992px) {
+    .eventsLeft {
+        display: none;  
+    }
+    .eventsRight {
+        flex: 1;
+    }  
+    .eventsRight__container {
+        width: 65%;
+        height: 65%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .eventsRight__container {
+        width: 75%;
+        height: 65%;
+    }
+    .eventsRight__container h1 {
+        font-size: 2rem;
+    }
+    .eventsRight__container p {
+        font-size: 1.05rem;
+        margin-top: 0.75rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .eventsRight__container {
+        width: 85%;
+        height: 65%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+}

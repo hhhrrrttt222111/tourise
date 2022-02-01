@@ -189,11 +189,7 @@
         height: 48px;
         width: 120px;
         border-radius: 10px;
-        cursor: pointer;
-        font-family: 'Neucha', cursive;
         font-size: 1.05rem;
-        font-weight: 800;
-        white-space: nowrap;
     }
 }
 
@@ -208,6 +204,12 @@
         margin-top: 0;
         gap: 0.5rem;
     }
+    .landingBtn {
+        outline: none;
+        height: 48px;
+        width: 110px;
+        font-size: 1.05rem;
+    }
     
 }
 
@@ -216,11 +218,23 @@
         width: 300px;
         margin: auto;
     }
+    .landingBtn {
+        outline: none;
+        height: 48px;
+        width: 110px;
+        font-size: 1rem;
+    }
 }
 
 @media screen and (max-width: 400px) {
     .landing_right img {
         width: 100%;
         margin: auto;
+    }
+    .landingBtn {
+        outline: none;
+        height: 40px;
+        width: 110px;
+        font-size: 1rem;
     }
 }

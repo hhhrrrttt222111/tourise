@@ -67,8 +67,6 @@ function GuideProfile() {
         setReview('')
     }
 
-    console.log(reviews)
-
 
     return (
         <div className='guideProfile'>

@@ -9,3 +9,11 @@
 .profile_icon {
     cursor: pointer;
 }
+
+
+@media screen and (max-width: 800px) {
+    .mainNav {
+        height: 70px;
+        padding: 0 1rem;
+    }
+}
