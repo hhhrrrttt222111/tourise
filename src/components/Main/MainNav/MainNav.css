@@ -4,6 +4,9 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 2rem;
+    backdrop-filter: blur(10px);
+    box-shadow:  14px 14px 28px #d65c36,
+             -14px -14px 28px #ff804a;
 }
 
 .profile_icon {
