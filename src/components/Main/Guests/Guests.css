@@ -15,7 +15,7 @@
 
 .guests__container {
     display: flex;
-    padding: 3rem;
+    padding: 2rem 4rem;
 }
 
 .guests__containerLeft {
@@ -23,6 +23,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    justify-content: center;
     width: 100%;
     gap: 2.1rem;
     padding: 2rem;
@@ -42,8 +43,30 @@
     line-height: 130%;
     width: 80%;
     font-family: var(--secondary-font);
-    color: #4d4d4d;
+    color: #333333;
     font-weight: 600;
+}
+
+.guest_discover_btn {
+    outline: none;
+    width: 200px;
+    height: 58px;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    font-family: var(--secondary-font);
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    color: var(--text-main);
+    text-decoration: none;
+    transition: ease-in-out 0.5s;
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,193,59,1) 100%);
+}
+
+.guest_discover_btn:hover {
+    background: rgb(255,110,64);
+    background: linear-gradient(90deg, rgba(255,110,64,1) 0%, rgba(255,193,59,1) 100%);
 }
 
 .guests__containerRight {
