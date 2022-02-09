@@ -1,9 +1,9 @@
 import React, { useState, useContext } from 'react'
 
-import { Link } from 'react-router-dom'
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom'
 import { BiChevronDown, BiPencil } from "react-icons/bi";
-import { MdArrowBackIosNew, MdArrowForwardIos, MdSecurity } from "react-icons/md";
+import { MdArrowBackIosNew, MdArrowForwardIos, MdSecurity } from "react-icons/md";  // eslint-disable-next-line
+import { IoTicketOutline, IoHeartOutline } from "react-icons/io5";
 import { MenuItem, Menu } from '@mui/material'; 
 
 import { AuthContext } from '../../context/AuthContext'
@@ -11,6 +11,7 @@ import { AuthContext } from '../../context/AuthContext'
 import './Profile.css'
 import EditAccount from './ProfileContent/EditAccount';
 import PassSecurity from './ProfileContent/PassSecurity';
+import Bookings from './ProfileContent/Bookings';
 
 function Profile() {
 
@@ -32,6 +33,17 @@ function Profile() {
     const logout = () => {
         handleLogout()
         navigate("/login")
+    }
+
+    let renderTab
+    if (tab === 1) {
+        renderTab = <EditAccount />
+    } else if(tab === 2) {
+        renderTab = <Bookings />
+    } else if(tab === 3) {
+        renderTab = <PassSecurity />
+    } else if(tab === 4) {
+        renderTab = <PassSecurity />
     }
 
 
@@ -67,20 +79,23 @@ function Profile() {
                         <MdArrowForwardIos style={{display: tab === 1 ? 'block': 'none'}}/>
                     </div>
                     <div className={`sidebar_item ${tab === 2 ? 'sidebar_item_active' : ''}`} onClick={() => setTab(2)}>
+                        <IoTicketOutline />
+                        <p>Bookings</p>
+                        <MdArrowForwardIos style={{display: tab === 2 ? 'block': 'none'}}/>
+                    </div>
+                    {/* <div className={`sidebar_item ${tab === 3 ? 'sidebar_item_active' : ''}`} onClick={() => setTab(3)}>
+                        <IoHeartOutline />
+                        <p>Favourites</p>
+                        <MdArrowForwardIos style={{display: tab === 3 ? 'block': 'none'}}/>
+                    </div> */}
+                    <div className={`sidebar_item ${tab === 4 ? 'sidebar_item_active' : ''}`} onClick={() => setTab(4)}>
                         <MdSecurity />
                         <p>Password & Security</p>
-                        <MdArrowForwardIos style={{display: tab === 2 ? 'block': 'none'}}/>
+                        <MdArrowForwardIos style={{display: tab === 4 ? 'block': 'none'}}/>
                     </div>
                 </div>
                 <div className='profile_content'>
-                    {
-                        tab === 1 ? (
-                            <EditAccount />
-                        ) : (
-                            <PassSecurity />
-                        )
-                    }
-                    
+                    {renderTab}
                 </div>
             </div>
         </div>

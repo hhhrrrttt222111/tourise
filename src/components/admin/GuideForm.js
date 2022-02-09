@@ -17,38 +17,44 @@ function GuideForm() {
     const [languages, setLanguages] = useState('')
     const [documentURL, setDocumentURL] = useState('')
     const [profilePic, setProfilePic] = useState('')
+    const [password, setPassword] = useState('')
 
 
     const handleAddGuide = (e) => {
         e.preventDefault()
-        if(name && username && phone && address && pincode && profilePic && languages) {
-            db.collection('guides').doc(username).set({
-                name: name,
-                username: username,
-                phone: phone,
-                profilePic: profilePic,
-                address: address,
-                pincode: pincode,
-                documentURL: documentURL,
-                languages: languages,
-                verified: true
-            })
-            .then(() => {
-                setName('')
-                setUsername('')
-                setPhone('')
-                setAddress('')
-                setPincode('')
-                setLanguages('')
-                setDocumentURL('')
-                setProfilePic('')
-
-                alert('Successfully Added')
-            })
-
+        if(password === 'necro21') {
+            if(name && username && phone && address && pincode && profilePic && languages) {
+                db.collection('guides').doc(username).set({
+                    name: name,
+                    username: username,
+                    phone: phone,
+                    profilePic: profilePic,
+                    address: address,
+                    pincode: pincode,
+                    documentURL: documentURL,
+                    languages: languages,
+                    verified: true
+                })
+                .then(() => {
+                    setName('')
+                    setUsername('')
+                    setPhone('')
+                    setAddress('')
+                    setPincode('')
+                    setLanguages('')
+                    setDocumentURL('')
+                    setProfilePic('')
+                    setPassword('')
+    
+                    alert('Successfully Added')
+                })
+    
+            } else {
+                alert('Enter all the fields')
+            } 
         } else {
-            alert('Enter all the fields')
-        } 
+            alert('Invalid ADMIN PASSWORD!!!')
+        }
     }
 
     return (
@@ -97,6 +103,12 @@ function GuideForm() {
                         <label>Profile Pic URL</label>
                         <input type="text" value={profilePic} onChange={(e) => setProfilePic(e.target.value)} className='ls_input'/>
                     </div> 
+                </div>
+                <div className='ls_input_row'>
+                    <div className='ls_input_container'>
+                        <label>Admin Password</label>
+                        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} className='ls_input'/>
+                    </div>
                 </div>
 
                 <div className='ls_input_submit'>

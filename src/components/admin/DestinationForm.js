@@ -7,12 +7,11 @@ import { db } from '../../firebase/firebase';
 
 import './Admin.css'
 
-function EventForm() {
+function DestinationForm() {
 
     const [name, setName] = useState('')
     const [location, setLocation] = useState('')
-    const [startDate, setStartDate] = useState('')
-    const [endDate, setEndDate] = useState('')
+    const [cost, setCost] = useState('')
     const [description, setDescription] = useState('')
     const [image, setImage] = useState('')
     const [password, setPassword] = useState('')
@@ -21,20 +20,19 @@ function EventForm() {
     const handleAddGuide = (e) => {
         e.preventDefault()
         if(password === 'necro21') {
-            if(name && location && startDate && endDate && description && image) {
-                db.collection('events').doc(name).set({
+            if(name && location && cost && description && image) {
+                db.collection('destination').doc().set({
                     name: name,
                     location: location,
-                    startDate: startDate,
-                    endDate: endDate,
+                    cost: cost,
+                    rating: 0,
                     description: description,
                     image: image,
                 })
                 .then(() => {
                     setName('')
                     setLocation('')
-                    setStartDate('')
-                    setEndDate('')
+                    setCost('')
                     setDescription('')
                     setImage('')
                     setPassword('')
@@ -56,38 +54,32 @@ function EventForm() {
                 <AiOutlineHome className='admin_home'/>
             </Link>
             <form className='loginSignin__form' onSubmit={handleAddGuide}>
-                <h1>Add New Event</h1>
+                <h1>Add New Destination</h1>
                 <div className='ls_input_row'>
                     <div className='ls_input_container'>
                         <label>Name</label>
-                        <input type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder='Diwali' className='ls_input'/>
+                        <input type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder='Serayu Rafting' className='ls_input'/>
                     </div>
                     <div className='ls_input_container'>
                         <label>Location</label>
-                        <input type="text" value={location} onChange={(e) => setLocation(e.target.value)} placeholder='Kochi' className='ls_input'/>
+                        <input type="text" value={location} onChange={(e) => setLocation(e.target.value)} placeholder='Central Java, Indonesia' className='ls_input'/>
                     </div> 
                 </div>
                 <div className='ls_input_row'>
                     <div className='ls_input_container'>
-                        <label>Start Date</label>
-                        <input type="text" value={startDate} onChange={(e) => setStartDate(e.target.value)} placeholder='03/06/2022' className='ls_input'/>
+                        <label>Cost/person (₹)</label>
+                        <input type="text" value={cost} onChange={(e) => setCost(e.target.value)} placeholder='500' className='ls_input'/>
                     </div>
-                    <div className='ls_input_container'>
-                        <label>End Date</label>
-                        <input type="text" value={endDate} onChange={(e) => setEndDate(e.target.value)} placeholder='05/06/2022' className='ls_input'/>
-                    </div> 
-                </div>
-                <div className='ls_input_row'>
                     <div className='ls_input_container'>
                         <label>Description</label>
                         <input type="text" value={description} onChange={(e) => setDescription(e.target.value)} className='ls_input'/>
                     </div>
+                </div>
+                <div className='ls_input_row'>
                     <div className='ls_input_container'>
                         <label>Image URL</label>
                         <input type="text" value={image} onChange={(e) => setImage(e.target.value)} className='ls_input'/>
                     </div> 
-                </div>
-                <div className='ls_input_row'>
                     <div className='ls_input_container'>
                         <label>Admin Password</label>
                         <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} className='ls_input'/>
@@ -95,7 +87,7 @@ function EventForm() {
                 </div>
 
                 <div className='ls_input_submit'>
-                    <button type='submit'>Add Event</button>
+                    <button type='submit'>Add Destination</button>
                 </div>
 
             </form>
@@ -103,4 +95,4 @@ function EventForm() {
     )
 }
 
-export default EventForm;
+export default DestinationForm;

@@ -2,8 +2,8 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 import './App.css';
 
-import { Profile, Login, SignIn, GuideForm, EventForm, SellerForm } from "./components";
-import { HomePage, MainPage, GuideProfile, DiscoverPage } from './pages'
+import { Profile, Login, SignIn, GuideForm, EventForm, SellerForm, DestinationForm } from "./components";
+import { HomePage, MainPage, GuideProfile, DiscoverPage, Checkout } from './pages'
 import PrivateRoute from "./utils/PrivateRoute"
 import ScrollToTop from "./utils/ScrollToTop"
 
@@ -47,6 +47,14 @@ function App() {
               }
             />
 
+            <Route path="checkout/:id" 
+              element={
+                <PrivateRoute>
+                  <Checkout />
+                </PrivateRoute>
+              }
+            />
+
             <Route path="admin/guide" 
               element={
                 <PrivateRoute>
@@ -67,6 +75,14 @@ function App() {
               element={
                 <PrivateRoute>
                   <SellerForm />
+                </PrivateRoute>
+              }
+            />
+
+            <Route path="admin/destination" 
+              element={
+                <PrivateRoute>
+                  <DestinationForm />
                 </PrivateRoute>
               }
             />

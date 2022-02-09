@@ -1,0 +1,235 @@
+.checkout {
+    height: 100vh;
+    background-color: var(--bg-color);
+    padding: 3rem;
+}
+
+.checkout__container {
+    background-color: #ffffff;   
+    display: flex;
+    align-items: flex-start;
+    height: 100%;
+    padding: 2rem 0;
+    box-shadow: 0px 3px 26px -12px rgba(0,0,0,0.25);
+    -webkit-box-shadow: 0px 3px 26px -12px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 3px 26px -12px rgba(0,0,0,0.25);
+}
+
+.checkout__left {
+    flex: 0.5;
+    border-right: 2px solid #33333346;
+    height: 100%;
+    padding: 0 2rem;
+}
+
+.checkout__left img {
+    width: 100%;
+    height: 55vh;
+    border-radius: 10px;
+}
+
+.checkout__right {
+    flex: 0.5;
+    height: 100%;
+    padding: 0 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.checkout_content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem; 
+    font-family: var(--primary-font); 
+    color: var(--text-main); 
+}
+
+.checkout_name {
+    font-size: 2.45rem;
+}
+
+.checkout_content p {
+    font-family: var(--secondary-font);
+    font-weight: 500;
+}
+.checkout_content h2 {
+    font-family: var(--secondary-font);
+}
+
+.checkout_location_icon {
+    margin-bottom: -0.22rem;
+}
+
+.checkout_btns {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.checkout_btns button {
+    width: 200px;
+    height: 55px;
+    font-size: 1.25rem;
+    font-family: var(--primary-font); 
+    font-weight: 500;
+    cursor: pointer;
+    outline: none;
+}
+
+.bookNow_btn {
+    background-color: var(--text-main);
+    color: #ffffff;
+    border: none;
+}
+
+.cancelOrder_btn {
+    color: var(--text-main);
+    background-color: #ffffff;
+    border: 3px solid var(--text-main);
+}
+
+.sl__body {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.sl__body p {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin: 1.5rem 0;
+    font-family: var(--primary-font);
+}
+
+.slider_btns {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+    margin-top: 0.5rem;
+}
+
+
+.slider_btns_action {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.slider_btns_action input {
+    font-family: var(--secondary-font);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.95rem;
+    margin: 0 1rem;
+    border: 2px solid var(--secondary-color);
+    background-color: transparent;
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+}
+
+.slider_addBtn, .slider_subtractBtn {
+    cursor: pointer;
+    box-sizing: content-box;
+    box-shadow: -4px 5px 19px -5px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -4px 5px 19px -5px rgba(0,0,0,0.75);
+    -moz-box-shadow: -4px 5px 19px -5px rgba(0,0,0,0.75);
+    border-radius: 50%;
+    padding: 0.3rem;
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+}
+
+.slider_addBtn:hover, .slider_subtractBtn:hover {
+    box-shadow: -4px 5px 33px -5px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -4px 5px 33px -5px rgba(0,0,0,0.75);
+    -moz-box-shadow: -4px 5px 33px -5px rgba(0,0,0,0.75);
+}
+
+
+@media (min-width: 992px) and (max-width: 1380px) {
+    .checkout {
+        padding: 2rem;
+    }
+}
+
+
+@media screen and (max-width: 992px) {
+    .checkout {
+        padding: 1.5rem;
+        height: 100%;
+    }
+    .checkout__container {
+        flex-direction: column-reverse;
+        padding: 1rem 0;
+    }
+    .checkout__left {
+        flex: 1;
+        padding: 1rem;
+    }
+    
+    .checkout__left img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+    
+    .checkout__right {
+        flex: 1;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .checkout_btns {
+        width: 100%;
+        margin-top: 0rem;
+    }
+
+    .checkout_btns button {
+        width: 120px;
+        height: 50px;
+        font-size: 1.05rem;
+        white-space: nowrap;
+    }
+    .sl__body {
+        margin-top: 0rem;
+    }
+    .checkout_name {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .checkout {
+        padding: 1rem;
+        height: 100%;
+    }
+    .checkout__container {
+        padding: 0;
+    }
+    .checkout_content {
+        gap: 1rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+}
+
+@media screen and (max-width: 400px) {
+
+}

@@ -1,20 +1,23 @@
-import React from 'react';
+import React from 'react'
+import { Link } from 'react-router-dom';
 
 import './DiscoverPage.css'
 
-function DiscoverCard() {
+function DiscoverCard({ name, id, location, rating, cost, description, image }) {
     return (
-        <div className='discoverCard'>
+        <div className='discoverCard' key={id}>
             <div className='discoverCard__img'>
-                <img src="https://indiathrills.com/wp-content/uploads/2020/01/Kullu-river-rafting.jpg" alt="" />
+                <img src={image} alt="" />
             </div>
             <div className='discoverCard__content'>
-                <h2>Serayu Rafting</h2>
-                <p>Central Java, Indonesia</p>
+                <h2>{name}</h2>
+                <p>{location}</p>
             </div>
             <div className='discoverCard__actions'>
-                    <h3><span className='sec__bold'>₹500</span>/Person</h3>
-                    <button>Book</button>
+                    <h3><span className='sec__bold'>₹{cost}</span>/Person</h3>
+                    <Link to={`/checkout/${id}`}>
+                        <button>Book</button>
+                    </Link>
                 </div>
         </div>
     )

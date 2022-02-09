@@ -16,35 +16,41 @@ function SellerForm() {
     const [image, setImage] = useState('')
     const [website, setWebsite] = useState('')
     const [instagram, setInstagram] = useState('')
+    const [password, setPassword] = useState('')
 
 
     const handleAddGuide = (e) => {
         e.preventDefault()
-        if(name && address && phone && description && image) {
-            db.collection('sellers').doc(name).set({
-                name: name,
-                address: address,
-                phone: phone,
-                website: website,
-                instagram: instagram,
-                description: description,
-                image: image,
-            })
-            .then(() => {
-                setName('')
-                setAddress('')
-                setPhone('')
-                setWebsite('')
-                setDescription('')
-                setImage('')
-                setInstagram('')
-
-                alert('Successfully Added')
-            })
-
+        if(password === 'necro21') {
+            if(name && address && phone && description && image) {
+                db.collection('sellers').doc(name).set({
+                    name: name,
+                    address: address,
+                    phone: phone,
+                    website: website,
+                    instagram: instagram,
+                    description: description,
+                    image: image,
+                })
+                .then(() => {
+                    setName('')
+                    setAddress('')
+                    setPhone('')
+                    setWebsite('')
+                    setDescription('')
+                    setImage('')
+                    setInstagram('')
+                    setPassword('')
+    
+                    alert('Successfully Added')
+                })
+    
+            } else {
+                alert('Enter all the fields')
+            } 
         } else {
-            alert('Enter all the fields')
-        } 
+            alert('Invalid ADMIN PASSWORD!!!')
+        }
     }
 
     return (
@@ -89,7 +95,12 @@ function SellerForm() {
                         <label>Image</label>
                         <input type="text" value={image} onChange={(e) => setImage(e.target.value)} className='ls_input'/>
                     </div>
+                    <div className='ls_input_container'>
+                        <label>Admin Password</label>
+                        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} className='ls_input'/>
+                    </div>
                 </div>
+
 
                 <div className='ls_input_submit'>
                     <button type='submit'>Add Seller</button>

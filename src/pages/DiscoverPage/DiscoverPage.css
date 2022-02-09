@@ -5,10 +5,23 @@
     flex-direction: column;
     align-items: flex-start;
     background-color: var(--bg-color);
+    position: relative;
 }
 
 .discoverPage__header {
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.go_back_discover {
+    position: absolute;
+    cursor: pointer;
+    color: var(--primary-color);
+    font-size: 1.55rem;
+    top: 30px;
+    left: 30px;
 }
 
 .discoverPage__header h1 {
@@ -20,13 +33,34 @@
     line-height: 95%;
 }
 
+.discoverPage__search {
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.discoverPage__input {
+    width: 60%;
+    height: 50px;
+    padding: 1rem;
+    border-radius: 30px;
+    outline: none;
+    box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.15);
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: var(--secondary-font);
+}
+
 .discoverPage__container {
     width: 100%;
     margin: 0 auto;
     display: grid;
     grid-gap: 2rem;
     grid-template-columns: repeat(4, 1fr);
-    margin-top: 3rem;
+    margin-top: 4rem;
     justify-items: center;
 }
 
@@ -92,7 +126,7 @@
     font-family: 'Changa One', cursive;
 }
 
-.discoverCard__actions button {
+.discoverCard__actions a button {
     outline: none;
     width: 80px;
     height: 35px;
@@ -109,7 +143,7 @@
     background: linear-gradient(90deg, rgba(255,110,64,1) 0%, rgba(255,193,59,1) 100%);
 }
 
-.discoverCard__actions button:hover {
+.discoverCard__actions a button:hover {
     border: 2px solid var(--secondary-color);
     color: var(--secondary-color);
     text-decoration: none;
@@ -119,13 +153,43 @@
 
 
 @media (min-width: 992px) and (max-width: 1380px) {
+    .discoverPage {
+        padding: 3.5rem;
+    }
+    .discoverPage__header h1 {
+        font-size: 3rem;
+    }
+
     .discoverPage__container {
         grid-template-columns: repeat(3, 1fr);
+    }
+    .discoverPage__input {
+        width: 80%;
+        height: 50px;
     }
 }
 
 
 @media screen and (max-width: 992px) {
+    .discoverPage {
+        padding: 2rem;
+        padding-top: 3rem;
+    }
+    .discoverPage__header {
+        margin-top: 2rem;
+    }
+    .discoverPage__input {
+        width: 80%;
+        height: 50px;
+    }
+    .go_back_discover {
+        font-size: 1.45rem;
+        top: 20px;
+        left: 20px;
+    }
+    .discoverPage__header h1 {
+        font-size: 3rem;
+    }
     .discoverPage__container {
         grid-template-columns: repeat(2, 1fr);
         margin-top: 3rem;
@@ -133,14 +197,40 @@
 }
 
 @media screen and (max-width: 800px) {
+    .discoverPage {
+        padding: 1rem;
+    }
+    .discoverPage__header h1 {
+        font-size: 2.5rem;
+    }
     .discoverPage__container {
         grid-template-columns: repeat(1, 1fr);
         margin-top: 3rem;
     }
+    .discoverPage__input {
+        width: 90%;
+        height: 50px;
+    }
 }
 
 @media screen and (max-width: 600px) {
-
+    .discoverPage__header h1 {
+        font-size: 2rem;
+    }
+    .discoverPage__input {
+        width: 100%;
+        height: 50px;
+    }
+    .discoverCard {
+        width: 260px;
+        height: 300px;
+    }
+    .discoverCard__content h2 {
+        font-size: 1.025rem;
+    }
+    .discoverCard__content p {
+        font-size: 0.925rem;
+    }
 }
 
 @media screen and (max-width: 400px) {
