@@ -1,5 +1,5 @@
 import React from 'react'
-import { Landing, Navbar, Shops, Events, Guide, Wiki, About } from '../../components'
+import { Landing, Navbar, Shops, Events, Guide, Wiki, About, Maps } from '../../components'
 
 import './HomePage.css'
 
@@ -13,6 +13,7 @@ function HomePage() {
             <Events />
             <Guide />
             <Wiki />
+            <Maps />
         </div>
     )
 }

@@ -24,7 +24,7 @@ function Events() {
                         />
                     </h1>
                     <p>
-                        Stay updated on all festivals, carnivals, holidays etc..
+                    Getting people together is at the heart of what we love about planning parties and events around the country. So, why not take a tour of some of the world’s biggest gatherings?
                     </p>
                 </div>
             </div>
