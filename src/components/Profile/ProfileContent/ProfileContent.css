@@ -162,6 +162,7 @@
 .bookings__header h1 {
     color: var(--primary-color);
     font-size: 2rem;
+    font-family: var(--primary-font);
 }
 
 .bookings__container {
@@ -174,6 +175,7 @@
 }
 
 .booked_card {
+    position: relative;
     display: flex;
     justify-content: space-between;
     padding: 1rem;
@@ -181,6 +183,17 @@
     border: 4px solid var(--secondary-color);
     border-radius: 15px;
     box-shadow: 0 5px 6px -3px rgba(0, 0, 0, .96);
+}
+
+.remove__booking_icon {
+    position: absolute;
+    right: -9px;
+    top: -9px;
+    font-size: 1.7rem;
+    background-color: #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #e61b1b;
 }
 
 .booked__left {
