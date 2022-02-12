@@ -9,10 +9,21 @@
              -14px -14px 28px #ff804a;
 }
 
+.mainNav img {
+    width: 150px;
+    cursor: pointer;
+}
+
 .profile_icon {
     cursor: pointer;
 }
 
+@media screen and (max-width: 992px) {
+    .mainNav img {
+        width: 100px;
+    }
+    
+}
 
 @media screen and (max-width: 800px) {
     .mainNav {

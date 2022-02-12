@@ -5,6 +5,10 @@
     justify-content: space-between;
 }
 
+.navbar img {
+    width: 150px;
+}
+
 .navbar_items {
     display: flex;
     align-items: center;
@@ -67,7 +71,10 @@
 
 
 @media screen and (max-width: 992px) {
-
+    .navbar img {
+        width: 100px;
+    }
+    
 }
 
 @media screen and (max-width: 800px) {

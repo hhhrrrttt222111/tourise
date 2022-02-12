@@ -4,10 +4,12 @@ import { HashLink } from 'react-router-hash-link';
 
 import './Navbar.css'
 
+import logo from '../../assets/png/logo.png'
+
 function Navbar() {
     return (
         <div className='navbar'>
-            <h1>Tourise</h1>
+            <img src={logo} alt="" />
 
             <div className='navbar_items'>
                 <HashLink to="#about" className='nav_item' smooth>
