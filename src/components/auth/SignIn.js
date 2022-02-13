@@ -62,7 +62,7 @@ function SignIn() {
     return (
         <div className='loginSignin'>
             <div className='ls__left'>
-                <h3>some random text hihisome random text hihi some random text hihi</h3>
+                <h3>Inspiring Destinations Within Your Reach</h3>
                 <img src={airport} alt="" />
             </div>
             <div className='ls__right'>
